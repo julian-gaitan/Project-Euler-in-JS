@@ -6,13 +6,13 @@ function nthPrime(n) {
   while (primes.length < n) {
     let number = primes[primes.length - 1] + 2;
     while (number != 0) {
-      let i;
-      for (i = 0; i < primes.length; i++) {
+      let i, limit = Math.floor(Math.sqrt(number));
+      for (i = 1; primes[i] <= limit; i++) {
         if (number % primes[i] == 0) {
           break;
         }
       }
-      if (primes.length == i) {
+      if (primes[i] > limit) {
         primes.push(number);
         number = 0;
       } else {
