@@ -28,4 +28,4 @@ function nextSequenceNumber(n) {
   return n;
 }
 
-console.log(longestCollatzSequence(46500));
+console.log(longestCollatzSequence(1e6));
