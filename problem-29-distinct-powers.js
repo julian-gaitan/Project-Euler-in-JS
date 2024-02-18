@@ -54,4 +54,4 @@ function distinctPowers(n) {
     return numberList.length;
 }
 
-console.log(distinctPowers(30));
+console.log(distinctPowers(100));
