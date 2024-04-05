@@ -3,6 +3,7 @@ const pandigitalArr = [];
 
 function incrementMultiplicantB(a, b, rest) {
   if (checkIfPandigital(a, b, rest)) {
+    // console.log(`A:${a}, B:${b}, rest:${rest}`);
     const result = a * b;
     if (!pandigitalArr.includes(result)) {
       pandigitalArr.push(result);
@@ -26,7 +27,6 @@ function incrementMultiplicantA(a, rest) {
 }
 
 function checkIfPandigital(a, b, rest) {
-  // console.log(`A:${a}, B:${b}, rest:${rest}`);
   const abMult = decomposeNumber(a * b);
   if (abMult.length === rest.length) {
     abMult.sort();
